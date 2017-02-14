@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html lang="en">     
+	<head>         
+		<meta charset="utf-8">         
+		<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+
+		<title>Mammogram Analyzer</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="Edson Mendieta">
+		<meta name="description" content="User interface for mammogram analyzing and diagnosing program">
+
+		<link rel="stylesheet" media="screen" href="styles.css">
+	</head> 
+	<body>
+
+		<div class="welcome fade" id="welcome">
+			<div class="welcomeText">
+				<h1 id="homeHeader"><span id="introText">Powered By </span><span id="gliaText">Hobo</span></h1>
+				<h3 id="homeTagline">Surviving, one meal at a time.</h3>
+			</div>
+		</div>
+		<div class="firstImg hidden" id="firstImg">
+			<div id="uploadBox">
+				<div id="uploadBoxContent">
+					<img id="uploadIcon" src="uploadBlueGray100.png">
+					<p id = "uploadTips"><span id='uploadDragTip'>Drag &amp; Drop your image file here</span><br><span id="orWord">or </span></p>
+					<input id="inputButton" type="file" name="myFile">
+				</div>
+				<div id="browseTriggerBox">
+					<p id="browseTrigger">browse</p>
+				</div>
+			</div>
+
+			<div class="hidden fade" id="progressBox">
+				<h3 id="percentage">0%</h3>
+				<progress id="progressBar" min="0" max="100" value="0"></progress>
+			</div>
+
+			<div class="hidden fade" id="userPage">
+				<header id="banner">
+					<img id="clipPic" src="clipboard50.png">
+					<div id="toolBox">
+						<img src="binoculars50.png">
+						<img id="minusPic" src="minusThin50.png">
+						<img src="plusThin50.png">
+					</div>
+					<!-- <h2 id="gliaLabBanner">gliaLab</h2> -->
+				</header>
+				<section id="diagnosisOptions">
+					<div id="scanOptions">
+						<img id="repeatIcon" src="refresh50.png">
+						<img id = "imageIcon" src="image50.png">
+					</div>
+				</section>
+				<canvas id="scanDisplay">
+					<img src="drawing.jpg">
+				</canvas>
+				<aside id="diagnosis">
+					<h2 id="diagnosisHeader">Diagnosis</h2>
+				</aside>
+			</div>
+		</div>
+
+
+		
+		<script src="index.js"></script>
+	</body>
+</html>
